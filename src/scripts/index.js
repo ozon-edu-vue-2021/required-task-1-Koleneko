@@ -10,8 +10,7 @@ const popupContainer = document.querySelector('.popup .content');
 const popupClose = document.querySelector('.popup .action');
 const loader = document.querySelector('.loader');
 
-const MAX_PAGE_IAMGES = 34;
-let loaderTimeout;
+const MAX_PAGE_IMAGES = 34;
 
 /**
  * Функция задаёт первоначальное состояние страницы.
@@ -60,11 +59,7 @@ const showLoader = function () {
  * Удаляет таймаут индикатора, ничего не возвращает.
  */
 const hideLoader = function () {
-    loaderTimeout = setTimeout(function () {
-        
-    }, 700);
     loader.style.visibility = 'hidden';
-    clearTimeout(loaderTimeout);
 }
 
 /**
@@ -155,8 +150,8 @@ const actionHandler = function (evt) {
     const nextPage = evt.currentTarget.dataset.page;
     evt.currentTarget.dataset.page = nextPage + 1;
 
-    if (nextPage > MAX_PAGE_IAMGES) {
-        console.warn(`WARN: You are trying to call a page that exceeds ${MAX_PAGE_IAMGES}`);
+    if (nextPage > MAX_PAGE_IMAGES) {
+        console.warn(`WARN: You are trying to call a page that exceeds ${MAX_PAGE_IMAGES}`);
         evt.currentTarget.disabled = true;
     } else {
         getPictures(nextPage);

@@ -34,6 +34,7 @@ button:disabled {
 
 button:disabled:hover {
     background-color: #CFD8DC;
+    cursor: default;
 }
 
 main {
@@ -133,6 +134,10 @@ figcaption {
 
 .popup.open {
     visibility: visible;
+}
+
+.link.open{
+    background-color: transparent;
 }
 
 .action.close {
