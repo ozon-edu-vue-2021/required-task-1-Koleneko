@@ -9,7 +9,7 @@ body {
 img {
     width: 100%;
     max-width: 100%;
-    display: bloсk;
+    display: block;
 }
 
 a {
@@ -34,6 +34,7 @@ button:disabled {
 
 button:disabled:hover {
     background-color: #CFD8DC;
+    cursor: default;
 }
 
 main {
@@ -56,6 +57,8 @@ main {
     padding: 10px 20px;
     border-radius: 6px;
     margin: 10px 0;
+    max-width: fit-content;
+    align-self: center;
 }
 
 .action:hover {
@@ -126,14 +129,18 @@ figcaption {
     bottom: 0;
     right: 0;
     background-color: rgba(33, 33, 33, 0.5);
-    z-index: -1;
+    z-index: 5;
 }
 
 .popup.open {
     visibility: visible;
 }
 
-.action {
+.link.open{
+    background-color: transparent;
+}
+
+.action.close {
     position: absolute;
     top: 50px;
     right: 50px;
